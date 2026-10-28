@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Camera An Ninh AI - Chính Hãng Giá Tốt Nhất</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- TOP BAR -->
+    <div class="bg-slate-900 text-slate-200 text-xs py-2 px-4">
+        <div class="max-w-7xl mx-auto flex justify-end items-center">
+            <a href="admin.html" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-cyan-400 font-bold px-3 py-1 rounded-full text-[11px] border border-slate-700 flex items-center gap-1 shadow-sm">
+                <i class="fa-solid fa-user-lock"></i> <span>Trang Quản Trị Admin</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="bg-white border-b sticky top-0 z-40 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+            <a href="#" class="flex items-center gap-3">
+                <div id="site-logo-wrap" class="w-16 h-16 rounded-full bg-white flex items-center justify-center font-black text-xl overflow-hidden border-2 border-slate-200 shadow-md p-1">
+                    <span id="site-logo-text" class="text-blue-600">VH</span>
+                    <img id="site-logo-img" src="" class="w-full h-full object-contain hidden">
+                </div>
+                <div>
+                    <span id="site-brand" class="text-xl md:text-2xl font-black text-blue-900 tracking-tight block">VŨ HOÀNG TELECOM</span>
+                    <span id="site-sub" class="text-xs font-bold text-cyan-600 tracking-wider uppercase block">Hệ Thống Camera An Ninh AI</span>
+                </div>
+            </a>
+
+            <div class="flex items-center gap-4">
+                <div class="hidden sm:flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-600 shadow-sm">
+                        <i class="fa-solid fa-headset text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] text-gray-400 block font-bold uppercase">Tổng đài hỗ trợ</span>
+                        <a href="#" id="site-hotline" class="text-base font-black text-red-600">1900.9259</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- === MENU NGANG PHÂN LOẠI SẢN PHẨM === -->
+        <div class="bg-blue-900 text-white px-4 shadow-inner">
+            <div class="max-w-7xl mx-auto flex items-center overflow-x-auto py-2.5 gap-2 md:gap-4 text-xs md:text-sm font-bold no-scrollbar">
+                <button onclick="filterProducts('all')" id="menu-all" class="px-4 py-2 rounded-lg bg-red-600 text-white whitespace-nowrap transition shadow-sm">
+                    <i class="fa-solid fa-house mr-1"></i> Tất Cả Sản Phẩm
+                </button>
+                <button onclick="filterProducts('Camera Imou')" id="menu-imou" class="px-4 py-2 rounded-lg hover:bg-blue-800 text-slate-200 hover:text-white whitespace-nowrap transition">
+                    <i class="fa-solid fa-camera mr-1"></i> Camera Imou
+                </button>
+                <button onclick="filterProducts('Camera Ezviz')" id="menu-ezviz" class="px-4 py-2 rounded-lg hover:bg-blue-800 text-slate-200 hover:text-white whitespace-nowrap transition">
+                    <i class="fa-solid fa-video mr-1"></i> Camera Ezviz
+                </button>
+                <button onclick="filterProducts('Camera Dahua')" id="menu-dahua" class="px-4 py-2 rounded-lg hover:bg-blue-800 text-slate-200 hover:text-white whitespace-nowrap transition">
+                    <i class="fa-solid fa-shield-halved mr-1"></i> Camera Dahua
+                </button>
+                <button onclick="filterProducts('Đầu Ghi Dahua')" id="menu-daughi" class="px-4 py-2 rounded-lg hover:bg-blue-800 text-slate-200 hover:text-white whitespace-nowrap transition">
+                    <i class="fa-solid fa-server mr-1"></i> Đầu Ghi Dahua
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 text-white py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-7 space-y-5">
+                <span class="bg-red-600/30 border border-red-500 text-red-300 text-xs font-bold px-3 py-1 rounded-full inline-block">🔥 BẢO VỆ TỐI ƯU 24/7</span>
+                <h1 id="site-title" class="text-3xl md:text-5xl font-black leading-tight">LẮP ĐẶT CAMERA AN NINH AI CHÍNH HÃNG - GIÁ RẺ NHẤT</h1>
+                <p class="text-slate-300 text-sm">Nhận diện người & xe AI thông minh. Cảnh báo còi hú chống trộm. Hình ảnh sắc nét 2K/4K ban đêm có màu.</p>
+                <button onclick="scrollToProducts()" class="bg-gradient-to-r from-red-600 to-orange-500 text-white font-black px-8 py-3.5 rounded-xl text-base shadow-lg shadow-red-600/30">
+                    XEM DANH SÁCH CAMERA ƯU ĐÃI <i class="fa-solid fa-arrow-down ml-2"></i>
+                </button>
+            </div>
+            <div class="lg:col-span-5">
+                <img id="site-hero-img" src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop" class="rounded-2xl shadow-2xl border-4 border-slate-700 w-full h-80 object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- KHỐI CÔNG NGHỆ CAMERA AI -->
+    <section class="py-14 bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs font-black text-blue-600 tracking-widest uppercase">CÔNG NGHỆ ĐỘT PHÁ 2026</span>
+                <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-1">CÁC TÍNH NĂNG THÔNG MINH BÁM SÁT THỰC TẾ</h2>
+                <div class="w-16 h-1 bg-blue-600 mx-auto mt-2"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-xl font-bold mb-4"><i class="fa-solid fa-brain"></i></div>
+                    <h3 class="font-extrabold text-slate-900 text-base mb-2">AI Nhận Diện Người & Xe</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Phân biệt chính xác chuyển động con người và vật thể, giảm 99% báo động giả.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl font-bold mb-4"><i class="fa-solid fa-lightbulb"></i></div>
+                    <h3 class="font-extrabold text-slate-900 text-base mb-2">Ban Đêm Có Màu 24/7</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Ghi hình siêu nét đầy đủ màu sắc sống động ngay cả trong đêm tối thui.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                    <div class="w-12 h-12 rounded-xl bg-red-100 text-red-600 flex items-center justify-center text-xl font-bold mb-4"><i class="fa-solid fa-bell"></i></div>
+                    <h3 class="font-extrabold text-slate-900 text-base mb-2">Cảnh Báo Còi Hú</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Kích hoạt còi hú âm lượng lớn và đèn chớp xua đuổi kẻ gian ngay lập tức.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl font-bold mb-4"><i class="fa-solid fa-cloud-rain"></i></div>
+                    <h3 class="font-extrabold text-slate-900 text-base mb-2">Kháng Nước IP67</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Vỏ hợp kim bền bỉ chịu mưa bão, bụi bẩn, hoạt động ổn định ngoài trời.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DANH SÁCH SẢN PHẨM -->
+    <section id="products-section" class="py-16 max-w-7xl mx-auto px-4">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2 id="product-section-title" class="text-2xl md:text-3xl font-black text-slate-900 uppercase">TẤT CẢ SẢN PHẨM KHUYẾN MÃI</h2>
+            <div class="w-16 h-1 bg-blue-600 mx-auto mt-2"></div>
+        </div>
+
+        <div id="landing-products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Render JS -->
+        </div>
+    </section>
+
+    <!-- SECTION TIN TỨC & BÀI VIẾT NỔI BẬT -->
+    <section class="py-16 bg-white border-t">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-black text-emerald-600 tracking-widest uppercase">TIN TỨC & KINH NGHIỆM</span>
+                <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-1">BÀI VIẾT MỚI NHẤT</h2>
+                <div class="w-16 h-1 bg-emerald-600 mx-auto mt-2"></div>
+            </div>
+
+            <div id="landing-news-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Render JS bài báo -->
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL ĐẶT HÀNG SẢN PHẨM -->
+    <div id="user-order-modal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 relative shadow-2xl">
+            <button onclick="closeOrderModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-xl"></i></button>
+            <h3 class="font-black text-xl text-slate-900 mb-1">ĐẶT MUA NGAY (COD)</h3>
+            <p id="target-prod-name" class="text-sm font-bold text-blue-600 mb-4"></p>
+
+            <form onsubmit="confirmOrder(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Họ tên của bạn (*)</label>
+                    <input type="text" id="cust-name" required placeholder="Nguyễn Văn A" class="w-full border rounded-xl p-3 text-sm focus:ring-2 focus:ring-blue-600 outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Số điện thoại (*)</label>
+                    <input type="tel" id="cust-phone" required placeholder="0901234567" class="w-full border rounded-xl p-3 text-sm focus:ring-2 focus:ring-blue-600 outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Địa chỉ giao hàng (*)</label>
+                    <textarea id="cust-address" required rows="2" placeholder="Số nhà, tên đường, phường/xã..." class="w-full border rounded-xl p-3 text-sm focus:ring-2 focus:ring-blue-600 outline-none"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-extrabold py-3.5 rounded-xl text-base shadow-lg shadow-red-600/30 transition">
+                    XÁC NHẬN ĐẶT HÀNG
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL XEM CHI TIẾT BÀI BÁO -->
+    <div id="news-detail-modal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-3xl w-full p-6 md:p-8 relative shadow-2xl max-h-[90vh] overflow-y-auto">
+            <button onclick="closeNewsDetailModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-2xl"></i></button>
+            
+            <div class="flex items-center gap-3 mb-3">
+                <span id="read-news-category" class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full uppercase">TƯ VẤN</span>
+                <span id="read-news-date" class="text-xs text-slate-400 font-medium">28/10/2026</span>
+            </div>
+
+            <h2 id="read-news-title" class="text-2xl md:text-3xl font-black text-slate-900 leading-tight mb-4">Tiêu đề bài viết</h2>
+            
+            <div class="w-full h-64 md:h-80 bg-slate-50 rounded-2xl mb-6 p-2 border flex items-center justify-center">
+                <img id="read-news-img" src="" class="max-h-full max-w-full object-contain">
+            </div>
+            
+            <p id="read-news-summary" class="font-bold text-slate-700 text-sm md:text-base leading-relaxed bg-slate-50 p-4 rounded-xl border-l-4 border-emerald-600 mb-6"></p>
+            
+            <div id="read-news-content" class="text-slate-700 text-sm md:text-base leading-relaxed whitespace-pre-line space-y-4"></div>
+        </div>
+    </div>
+
+    <script>
+        let selectedProduct = '';
+        let currentFilter = 'all';
+
+        function loadLandingData() {
+            const cfg = JSON.parse(localStorage.getItem('site_settings') || '{}');
+            if(cfg.brand) {
+                document.getElementById('site-brand').innerText = cfg.brand;
+                document.getElementById('page-title').innerText = cfg.brand + " - Camera An Ninh AI & Tin Tức";
+            }
+            if(cfg.sub) document.getElementById('site-sub').innerText = cfg.sub;
+            if(cfg.hotline) {
+                document.getElementById('site-hotline').innerText = cfg.hotline;
+                document.getElementById('site-hotline').href = 'tel:' + cfg.hotline;
+            }
+            if(cfg.title) document.getElementById('site-title').innerText = cfg.title;
+
+            if(cfg.logo) {
+                document.getElementById('site-logo-img').src = cfg.logo;
+                document.getElementById('site-logo-img').classList.remove('hidden');
+                document.getElementById('site-logo-text').classList.add('hidden');
+            }
+
+            if(cfg.heroImg) {
+                document.getElementById('site-hero-img').src = cfg.heroImg;
+            }
+
+            renderFilteredProducts();
+            renderNews();
+        }
+
+        // Lọc sản phẩm theo menu ngang chính xác
+        function filterProducts(category) {
+            currentFilter = category;
+            
+            // Đổi màu active trên menu
+            ['all', 'Camera Imou', 'Camera Ezviz', 'Camera Dahua', 'Đầu Ghi Dahua'].forEach((cat, idx) => {
+                const key = ['all', 'imou', 'ezviz', 'dahua', 'daughi'][idx];
+                const btn = document.getElementById('menu-' + key);
+                if(cat === category) {
+                    btn.className = "px-4 py-2 rounded-lg bg-red-600 text-white whitespace-nowrap transition shadow-sm";
+                } else {
+                    btn.className = "px-4 py-2 rounded-lg hover:bg-blue-800 text-slate-200 hover:text-white whitespace-nowrap transition";
+                }
+            });
+
+            // Đổi tiêu đề section
+            const titles = {
+                'all': 'TẤT CẢ SẢN PHẨM KHUYẾN MÃI',
+                'Camera Imou': 'DANH MỤC CAMERA IMOU CHÍNH HÃNG',
+                'Camera Ezviz': 'DANH MỤC CAMERA EZVIZ CHÍNH HÃNG',
+                'Camera Dahua': 'DANH MỤC CAMERA DAHUA CHÍNH HÃNG',
+                'Đầu Ghi Dahua': 'DANH MỤC ĐẦU GHI HÌNH DAHUA'
+            };
+            document.getElementById('product-section-title').innerText = titles[category];
+
+            renderFilteredProducts();
+        }
+
+        function renderFilteredProducts() {
+            const prods = JSON.parse(localStorage.getItem('site_products') || '[]');
+            const grid = document.getElementById('landing-products-grid');
+
+            let filtered = prods;
+            if(currentFilter !== 'all') {
+                filtered = prods.filter(p => p.brand === currentFilter);
+            }
+
+            if(filtered.length === 0) {
+                grid.innerHTML = `<p class="col-span-3 text-center text-slate-400 py-12">Không tìm thấy sản phẩm nào trong danh mục này.</p>`;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(p => `
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-56 bg-slate-50 p-4 flex items-center justify-center border-b border-slate-100">
+                            <img src="${p.img}" class="max-h-full max-w-full object-contain">
+                        </div>
+                        <div class="p-5">
+                            <span class="text-xs font-bold text-blue-600 uppercase">${p.brand}</span>
+                            <h3 class="font-bold text-lg text-slate-900 mt-1 mb-2">${p.name}</h3>
+                            <p class="text-xs text-slate-500 mb-4">${p.desc}</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <div class="flex items-baseline gap-2 mb-4">
+                            <span class="text-2xl font-black text-red-600">${p.price}</span>
+                            <span class="text-sm line-through text-slate-400">${p.oldPrice || ''}</span>
+                        </div>
+                        <button onclick="openOrderModal('${p.name}')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl text-sm transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-shopping"></i> ĐẶT MUA NGAY
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderNews() {
+            const news = JSON.parse(localStorage.getItem('site_news') || '[]');
+            const newsGrid = document.getElementById('landing-news-grid');
+            if(news.length === 0) {
+                newsGrid.innerHTML = `<p class="col-span-3 text-center text-slate-400 py-8">Chưa có bài viết tin tức nào được cập nhật.</p>`;
+                return;
+            }
+            newsGrid.innerHTML = news.map(n => `
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-full h-52 bg-slate-50 p-3 flex items-center justify-center border-b border-slate-100">
+                            <img src="${n.img}" class="max-h-full max-w-full object-contain">
+                        </div>
+                        <div class="p-5">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-[10px] font-bold uppercase bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-md">${n.category}</span>
+                                <span class="text-xs text-slate-400">${n.date}</span>
+                            </div>
+                            <h3 class="font-bold text-base text-slate-900 mb-2 line-clamp-2 hover:text-emerald-600 cursor-pointer" onclick="readArticle(${n.id})">${n.title}</h3>
+                            <p class="text-xs text-slate-500 line-clamp-3 leading-relaxed">${n.summary}</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <button onclick="readArticle(${n.id})" class="w-full bg-slate-100 hover:bg-emerald-600 hover:text-white text-slate-700 font-bold py-2.5 rounded-xl text-xs transition flex items-center justify-center gap-1">
+                            ĐỌC BÀI VIẾT <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function readArticle(id) {
+            const news = JSON.parse(localStorage.getItem('site_news') || '[]');
+            const n = news.find(item => item.id === id);
+            if(!n) return;
+
+            document.getElementById('read-news-title').innerText = n.title;
+            document.getElementById('read-news-category').innerText = n.category;
+            document.getElementById('read-news-date').innerText = n.date;
+            document.getElementById('read-news-img').src = n.img;
+            document.getElementById('read-news-summary').innerText = n.summary;
+            document.getElementById('read-news-content').innerText = n.content;
+
+            document.getElementById('news-detail-modal').classList.remove('hidden');
+        }
+
+        function closeNewsDetailModal() {
+            document.getElementById('news-detail-modal').classList.add('hidden');
+        }
+
+        function scrollToProducts() {
+            document.getElementById('products-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function openOrderModal(pName) {
+            selectedProduct = pName;
+            document.getElementById('target-prod-name').innerText = pName;
+            document.getElementById('user-order-modal').classList.remove('hidden');
+        }
+
+        function closeOrderModal() {
+            document.getElementById('user-order-modal').classList.add('hidden');
+        }
+
+        function confirmOrder(e) {
+            e.preventDefault();
+            const name = document.getElementById('cust-name').value;
+            const phone = document.getElementById('cust-phone').value;
+            const address = document.getElementById('cust-address').value;
+            const time = new Date().toLocaleString('vi-VN');
+
+            const orders = JSON.parse(localStorage.getItem('orders') || '[]');
+            orders.unshift({ name, phone, address, product: selectedProduct, time });
+            localStorage.setItem('orders', JSON.stringify(orders));
+
+            alert('🎉 Đặt hàng thành công! Đơn hàng của ní đã được chuyển trực tiếp vào Trang Admin.');
+            closeOrderModal();
+        }
+
+        loadLandingData();
+    </script>
+</body>
+</html>
